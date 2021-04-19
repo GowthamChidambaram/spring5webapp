@@ -15,7 +15,7 @@ public class Book {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private String id;
+  private Long id;
   private String title;
   private String isbn;
 
@@ -33,11 +33,11 @@ public class Book {
   }
 
 
-  public String getId() {
+  public Long getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(Long id) {
     this.id = id;
   }
 
@@ -78,13 +78,5 @@ public class Book {
     return Objects.hash(id);
   }
 
-  @Override
-  public String toString() {
-    return "Book{" +
-        "id='" + id + '\'' +
-        ", title='" + title + '\'' +
-        ", isbn='" + isbn + '\'' +
-        ", authors=" + authors +
-        '}';
-  }
+
 }

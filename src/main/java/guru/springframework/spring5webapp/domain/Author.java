@@ -75,13 +75,5 @@ public class Author {
     return Objects.hash(id);
   }
 
-  @Override
-  public String toString() {
-    return "Author{" +
-        "id=" + id +
-        ", firstName='" + firstName + '\'' +
-        ", lastName='" + lastName + '\'' +
-        ", books=" + books +
-        '}';
-  }
+
 }
