@@ -31,3 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
+
+/Users/gchidambaranathan/Desktop/spring5webapp/src/main/resources/application.properties
