@@ -1,4 +1,4 @@
-package guru.springframework.spring5webapp.controller;
+package guru.springframework.spring5webapp.controllers;
 
 import guru.springframework.spring5webapp.domain.Author;
 import guru.springframework.spring5webapp.domain.Book;
@@ -40,6 +40,7 @@ public class HomeController {
 
     eric.getBooks().add(ddd);
     ddd.getAuthors().add(eric);
+    publisher.setName("dubuku");
 
 //    publisher.setName("SFG publishing");
 //    publisher.setCity("california");
@@ -54,18 +55,19 @@ public class HomeController {
     publisherRepository.save(publisher);
     bookRepository.save(ddd);
 
-
+    Publisher publisher1 = new Publisher();
     Author rod = new Author("Rod", "Johnson");
     Book noEJB = new Book("J2EE Development without EJB", "3939459459");
     rod.getBooks().add(noEJB);
     noEJB.getAuthors().add(rod);
 
-    noEJB.setPublisher(publisher);
-    publisher.getBooks().add(noEJB);
+    noEJB.setPublisher(publisher1);
+    publisher1.getBooks().add(noEJB);
 
     authorRepository.save(rod);
+    publisherRepository.save(publisher1);
     bookRepository.save(noEJB);
-    publisherRepository.save(publisher);
+
 
     System.out.println("Started in Bootstrap");
     System.out.println("publisher count"+ publisher.getBooks().size());

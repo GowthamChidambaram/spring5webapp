@@ -23,7 +23,7 @@ public class Publisher {
   private String state;
   private String zip;
 
-  @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+  @OneToMany(cascade = CascadeType.ALL)
   @JoinColumn(name = "publisher_id")
   private Set<Book> books = new HashSet<>();
 
